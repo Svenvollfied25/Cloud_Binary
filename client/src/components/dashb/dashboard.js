@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 import Spinner from "../common/commonSpinner";
-import ProfileComp from ".././Profile/ProfileComp";
-import NewExperience from ".././Profile/NewExperience";
-import NewEducation from ".././Profile/NewEducation";
+import ProfileComp from "../Profile/ProfileComp";
+import NewExperience from "../Profile/NewExperience";
+import NewEducation from "../Profile/NewEducation";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -32,7 +32,7 @@ class Dashboard extends Component {
           <div className="card padding">
             <p className="lead text-muted">
               {" "}
-              <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              <Link to={`/profile/${profile.username}`}>{user.name}</Link>
             </p>
             <ProfileComp />
             <NewExperience experience={profile.exp} />

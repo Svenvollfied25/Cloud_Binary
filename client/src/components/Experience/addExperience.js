@@ -36,13 +36,13 @@ class AddExperience extends Component {
     e.preventDefault();
 
     const expData = {
-      company: this.state.company,
-      title: this.state.title,
-      location: this.state.location,
-      from: this.state.from,
-      to: this.state.to,
-      current: this.state.current,
-      description: this.state.description
+      employer_name: this.state.company,
+      role: this.state.title,
+      address: this.state.location,
+      started: this.state.from,
+      ended: this.state.to,
+      is_current: this.state.current,
+      desc: this.state.description
     };
 
     this.props.addExperience(expData, this.props.history);
@@ -136,7 +136,7 @@ class AddExperience extends Component {
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="btn btn-success btn-block mt-4"
                 />
               </form>
             </div>

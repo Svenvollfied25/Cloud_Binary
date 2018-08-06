@@ -15,8 +15,8 @@ class NewEducation extends Component {
         <td>{edu.institution_name}</td>
         <td>{edu.degree_type}</td>
         <td>
-          <Moment format="YYYY/MM/DD">{edu.from}</Moment> -
-          {edu.to === null ? (
+          <Moment format="YYYY/MM/DD">{edu.started}</Moment> -
+          {edu.started === null ? (
             " Now"
           ) : (
             <Moment format="YYYY/MM/DD">{edu.to}</Moment>

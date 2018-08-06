@@ -12,14 +12,14 @@ class NewExperience extends Component {
   render() {
     const experience = this.props.experience.map(exp => (
       <tr key={exp._id}>
-        <td>{exp.company}</td>
-        <td>{exp.title}</td>
+        <td>{exp.employer_name}</td>
+        <td>{exp.role}</td>
         <td>
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
-          {exp.to === null ? (
+          <Moment format="YYYY/MM/DD">{exp.started}</Moment> -
+          {exp.started === null ? (
             " Now"
           ) : (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+            <Moment format="YYYY/MM/DD">{exp.ended}</Moment>
           )}
         </td>
         <td>

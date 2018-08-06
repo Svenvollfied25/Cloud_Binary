@@ -15,12 +15,16 @@ import "./App.css";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Dashboard from "./components/dashb/dashboard";
+import userProfile from "./components/userProfile/userProfile";
+import peopleProfile from "./components/PeopleProfile/people";
 import Switch from "../node_modules/react-router-dom/Switch";
 
 import newProfile from "./components/newProfile/newProfile";
 import editProfile from "./components/editProfile/editprofile";
 import addEducation from "./components/Education/addEducation";
 import addExperience from "./components/Experience/addExperience";
+import Posts from "./components/Posts/Posts";
+// import Post from "./components/post/post";
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -50,6 +54,9 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/profiles" component={userProfile} />
+            <Route exact path="/profile/:username" component={peopleProfile} />
+
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
@@ -79,6 +86,10 @@ class App extends Component {
                 component={addExperience}
               />
             </Switch>
+            <Switch>
+              <PrivateRoute exact path="/feed" component={Posts} />
+            </Switch>
+
             <Footer />
           </div>
         </Router>
