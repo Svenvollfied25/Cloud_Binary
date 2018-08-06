@@ -57,7 +57,7 @@ app.get("*", (req, res) => {
 });
 
 //Port
-const port = process.env.PORT || 7577;
+const port = process.env.PORT || 5000;
 
 //Server Start
 app.listen(port, () => console.log("Started at " + port));
