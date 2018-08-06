@@ -18,7 +18,7 @@ class Footer extends React.Component {
             />
           </div>
         ) : null}
-        <div className="bg-dark text-white mt-5 p-4 text-center">
+        <div className="bg-white text-black mt-5 p-4 text-center">
           &nbsp;
           <button
             type="button"

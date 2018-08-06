@@ -38,12 +38,6 @@ class Dashboard extends Component {
             <NewExperience experience={profile.exp} />
             <NewEducation education={profile.edu} />
             <div style={{ marginBottom: "60px" }} />
-            <button
-              onClick={this.onDeleteClick.bind(this)}
-              className="btn btn-danger"
-            >
-              Delete My Account
-            </button>
           </div>
         );
       } else {
